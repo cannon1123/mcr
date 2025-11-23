@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auth Flip Glass</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <video autoplay muted loop id="bgVideo">
+    <source src="img/fondo.mp4" type="video/mp4">
+  </video>
+
+  <div class="container" id="authBox">
+    <div class="card">
+      <div class="form login">
+        <h2>Iniciar Sesión</h2>
+        <input type="email" placeholder="Correo" required>
+        <input type="password" placeholder="Contraseña" required>
+        <div class="options">
+          <label><input type="checkbox"> Recordarme</label>
+          <a href="#">¿Olvidaste tu contraseña?</a>
+        </div>
+        <button>Entrar</button>
+        <div class="toggle">¿No tienes cuenta? <span onclick="toggleForm()">Regístrate</span></div>
+      </div>
+
+      <div class="form signup">
+        <h2>Crear Cuenta</h2>
+        <input type="text" placeholder="Usuario" required>
+        <input type="email" placeholder="Correo" required>
+        <input type="number" placeholder="Teléfono" required>
+        <input type="password" placeholder="Contraseña" required>
+        <button>Registrarse</button>
+        <div class="toggle">¿Ya tienes cuenta? <span onclick="toggleForm()">Inicia sesión</span></div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
