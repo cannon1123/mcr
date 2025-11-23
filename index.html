@@ -1,43 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Auth Flip Glass</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <video autoplay muted loop id="bgVideo">
-    <source src="img/fondo.mp4" type="video/mp4">
-  </video>
-
-  <div class="container" id="authBox">
-    <div class="card">
-      <div class="form login">
-        <h2>Iniciar Sesión</h2>
-        <input type="email" placeholder="Correo" required>
-        <input type="password" placeholder="Contraseña" required>
-        <div class="options">
-          <label><input type="checkbox"> Recordarme</label>
-          <a href="#">¿Olvidaste tu contraseña?</a>
-        </div>
-        <button>Entrar</button>
-        <div class="toggle">¿No tienes cuenta? <span onclick="toggleForm()">Regístrate</span></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Holographic Login Projection</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scene">
+      <div class="projector-device">
+        <div class="projector-lens"></div>
+        <div class="projector-body"></div>
       </div>
 
-      <div class="form signup">
-        <h2>Crear Cuenta</h2>
-        <input type="text" placeholder="Usuario" required>
-        <input type="email" placeholder="Correo" required>
-        <input type="number" placeholder="Teléfono" required>
-        <input type="password" placeholder="Contraseña" required>
-        <button>Registrarse</button>
-        <div class="toggle">¿Ya tienes cuenta? <span onclick="toggleForm()">Inicia sesión</span></div>
+      <div class="light-beam light-beam-0"></div>
+      <div class="light-beam light-beam-1"></div>
+      <div class="light-beam light-beam-2"></div>
+      <div class="light-beam light-beam-3"></div>
+      <div class="light-beam light-beam-4"></div>
+      <div class="light-beam light-beam-5"></div>
+      <div class="light-beam light-beam-6"></div>
+      <div class="light-beam light-beam-7"></div>
+      <div class="light-beam light-beam-8"></div>
+      <div class="light-beam light-beam-final"></div>
+
+      <div class="login-card">
+        <div class="scan-line"></div>
+
+        <div class="card-content">
+          <div class="title">
+            <h1>ACCESS</h1>
+            <p>Holographic Authentication System</p>
+          </div>
+
+          <form id="loginForm">
+            <div class="input-group">
+              <label>USERNAME</label>
+              <input
+                type="text"
+                id="username"
+                placeholder="Enter your username..."
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="input-group">
+              <label>PASSWORD</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Security code..."
+                autocomplete="off"
+              />
+            </div>
+
+            <button type="button" class="btn-login" id="loginBtn">
+              <span>► LOGIN</span>
+            </button>
+
+            <div class="links">
+              <a href="#">Forgot password?</a>
+              <a href="#">Sign up</a>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-  
-  <script src="script.js"></script>
-</body>
+
+    <script src="script.js"></script>
+  </body>
 </html>
